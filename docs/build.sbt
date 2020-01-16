@@ -29,4 +29,7 @@ webpackConfigFile in fullOptJS := Some(baseDirectory.value / "webpack-opt.config
 webpackDevServerExtraArgs in fastOptJS := Seq("--inline", "--hot")
 webpackBundlingMode in fastOptJS := BundlingMode.LibraryOnly()
 
-scalacOptions += "-P:scalajs:sjsDefinedByDefault"
+scalacOptions ++= {
+  if (scalaJSVersion.startsWith("0.6.")) Seq("-P:scalajs:sjsDefinedByDefault")
+  else Nil
+}

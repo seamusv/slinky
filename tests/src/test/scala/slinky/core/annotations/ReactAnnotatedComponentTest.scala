@@ -128,7 +128,8 @@ object TakeValuesFromCompanionObject {
   type Props = Unit
 
   override def render(): ReactElement = {
-    throw new Exception("BOO")
+    // throw new Exception("BOO")
+    null
   }
 }
 

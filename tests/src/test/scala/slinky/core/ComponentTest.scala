@@ -156,7 +156,8 @@ object BadComponent extends StatelessComponentWrapper {
 
   class Def(jsProps: js.Object) extends Definition(jsProps) {
     override def render(): ReactElement = {
-      throw new Exception("BOO")
+      // throw new Exception("BOO")
+      null
     }
   }
 }
